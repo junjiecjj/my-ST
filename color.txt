@@ -1,0 +1,112 @@
+// default
+static const char *colorname[] = {
+  /* 8 normal colors */
+  [0] = "#000000", /* black   */
+  [1] = "#ff5555", /* red     */
+  [2] = "#50fa7b", /* green   */
+  [3] = "#f1fa8c", /* yellow  */
+  [4] = "#bd93f9", /* blue    */
+  [5] = "#ff79c6", /* magenta */
+  [6] = "#8be9fd", /* cyan    */
+  [7] = "#bbbbbb", /* white   */
+
+  /* 8 bright colors */
+  [8]  = "#44475a", /* black   */
+  [9]  = "#ff5555", /* red     */
+  [10] = "#50fa7b", /* green   */
+  [11] = "#f1fa8c", /* yellow  */
+  [12] = "#bd93f9", /* blue    */
+  [13] = "#ff79c6", /* magenta */
+  [14] = "#8be9fd", /* cyan    */
+  [15] = "#ffffff", /* white   */
+
+  /* special colors */
+  [256] = "#282a36", /* background */
+  [257] = "#f8f8f2", /* foreground */
+};
+
+// seabird  st1
+static const char *colorname[] = {
+	// 8 normal colors
+    [0] = "#0b141a",
+	[1] = "#ff4053",
+	[2] = "#11ab00",
+	[3] = "#bf8c00",
+	[4] = "#0099ff",
+	[5] = "#9854ff",
+	[6] = "#00a5ab",
+	[7] = "#ffffff",
+
+    // 8 bright colors
+    [8] = "#0b141a",
+	[9] = "#ff4053",
+	[10] = "#11ab00",
+	[11] = "#bf8c00",
+	[12] = "#0099ff",
+	[13] = "#9854ff",
+	[14] = "#00a5ab",
+	[15] = "#ffffff",
+
+    /* special colors */
+	[256] = "#CDC5BF", /* 258 -> bg */
+	[257] = "#61707a", /* 259 -> fg */
+};
+
+
+
+// seoul256  st1
+static const char *colorname[] = {
+	// 8 normal colors
+    [0] = "#0b141a",
+	[1] = "#af5f5f",
+	[2] = "#5f885f",
+	[3] = "#af8760",
+	[4] = "#5f87ae",
+	[5] = "#875f87",
+	[6] = "#5f8787",
+	[7] = "#e4e4e4",
+
+    // 8 bright colors
+    [8] = "#0b141a",
+	[9] = "#870100",
+	[10] = "#005f00",
+	[11] = "#d8865f",
+	[12] = "#0087af",
+	[13] = "#87025f",
+	[14] = "#008787",
+	[15] = "#eeeeee",
+
+    /* special colors */
+	[256] = "#D2B48C", /* 258 -> bg */
+	[257] = "#657b83", /* 259 -> fg */
+};
+
+// solarized light  st1
+static const char *colorname[] = {
+	// 8 normal colors
+    [0] = "#073642",
+	[1] = "#dc322f",
+	[2] = "#859900",
+	[3] = "#b58900",
+	[4] = "#268bd2",
+	[5] = "#d33682",
+	[6] = "#2aa198",
+	[7] = "#eee8d5",
+
+    // 8 bright colors
+    [8] = "#002b36",
+	[9] = "#cb4b16",
+	[10] = "#586e75",
+	[11] = "#657b83",
+	[12] = "#839496",
+	[13] = "#6c71c4",
+	[14] = "#93a1a1",
+	[15] = "#fdf6e3",
+
+
+    /* special colors */
+	[256] = "#D2B48C", /* 258 -> bg */
+	[257] = "#657b83", /* 259 -> fg */
+};
+
+
