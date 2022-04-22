@@ -34,7 +34,7 @@ Based on Aurélien APTEL <aurelien dot aptel at gmail dot com> bt source code.
 
 
 # 快捷键
-
+```
 /* Internal keyboard shortcuts. */
 // Mod1Mask 为alt
 #define MODKEY Mod1Mask
@@ -74,3 +74,4 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = 20} },  /*shift+pageup上翻20行*/
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = 20} },
 };
+```
