@@ -144,6 +144,7 @@ CURSOR_SAVE	st.c	/^	CURSOR_SAVE,$/;"	e	enum:cursor_movement	file:
 CURSOR_WRAPNEXT	st.c	/^	CURSOR_WRAPNEXT = 1,$/;"	e	enum:cursor_state	file:
 CUSTOMIZATION	st.1	/^.SH CUSTOMIZATION$/;"	s	title:ST
 Color	x.c	/^typedef XftColor Color;$/;"	t	typeref:typename:XftColor	file:
+Credits	README.md	/^Credits$/;"	s
 DC	x.c	/^} DC;$/;"	t	typeref:struct:__anon0b88b7ae0908	file:
 DEFAULT	st.h	/^#define DEFAULT(/;"	d
 DESCRIPTION	st.1	/^.SH DESCRIPTION$/;"	s	title:ST
@@ -180,6 +181,7 @@ ISDELIM	st.c	/^#define ISDELIM(/;"	d	file:
 IS_SET	st.c	/^#define IS_SET(/;"	d	file:
 IS_SET	x.c	/^#define IS_SET(/;"	d	file:
 IS_TRUECOL	st.h	/^#define IS_TRUECOL(/;"	d
+Installation	README.md	/^Installation$/;"	s
 Key	x.c	/^} Key;$/;"	t	typeref:struct:__anon0b88b7ae0308	file:
 LEN	st.h	/^#define LEN(/;"	d
 LIBS	config.mk	/^LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft -lXrender\\$/;"	m
@@ -225,7 +227,9 @@ OBJ	Makefile	/^OBJ = $(SRC:.c=.o)$/;"	m
 OPTIONS	st.1	/^.SH OPTIONS$/;"	s	title:ST
 PKG_CONFIG	config.mk	/^PKG_CONFIG = pkg-config$/;"	m
 PREFIX	config.mk	/^PREFIX = \/usr\/local$/;"	m
+Requirements	README.md	/^Requirements$/;"	s
 Rune	st.h	/^typedef uint_least32_t Rune;$/;"	t	typeref:typename:uint_least32_t
+Running st	README.md	/^Running st$/;"	s
 SEE ALSO	st.1	/^.SH SEE ALSO$/;"	s	title:ST
 SEL_EMPTY	st.h	/^	SEL_EMPTY = 1,$/;"	e	enum:selection_mode
 SEL_IDLE	st.h	/^	SEL_IDLE = 0,$/;"	e	enum:selection_mode
@@ -609,6 +613,7 @@ specbuf	x.c	/^	GlyphFontSpec *specbuf; \/* font spec buffer used for rendering *
 spot	x.c	/^		XPoint spot;$/;"	m	struct:__anon0b88b7ae0508::__anon0b88b7ae0608	typeref:typename:XPoint	file:
 spotlist	x.c	/^		XVaNestedList spotlist;$/;"	m	struct:__anon0b88b7ae0508::__anon0b88b7ae0608	typeref:typename:XVaNestedList	file:
 st	Makefile	/^st: $(OBJ)$/;"	t
+st - simple terminal	README.md	/^st - simple terminal$/;"	s
 st.o	Makefile	/^st.o: config.h st.h win.h$/;"	t
 state	st.c	/^	char state;$/;"	m	struct:__anon7c9e12dd0108	typeref:typename:char	file:
 strdump	st.c	/^strdump(void)$/;"	f	typeref:typename:void
@@ -772,3 +777,4 @@ y	st.c	/^	int y;$/;"	m	struct:__anon7c9e12dd0108	typeref:typename:int	file:
 zoom	x.c	/^zoom(const Arg *arg)$/;"	f	typeref:typename:void
 zoomabs	x.c	/^zoomabs(const Arg *arg)$/;"	f	typeref:typename:void
 zoomreset	x.c	/^zoomreset(const Arg *arg)$/;"	f	typeref:typename:void
+快捷键	README.md	/^# 快捷键$/;"	c
