@@ -32,7 +32,7 @@
 // static char *font = "CaskaydiaCove Nerd Font:style=Light:pixelsize=20:antialias=true:autohint=true";
 // static char *font = "CaskaydiaCove Nerd Font:style=ExtraLight:pixelsize=20:antialias=true:autohint=true";
 // static char *font = "CaskaydiaCove Nerd Font Mono:style=Regular:pixelsize=20:antialias=true:autohint=true";
-static char *font = "CaskaydiaCove Nerd Font Mono:style=SemiLight:pixelsize=20:antialias=true:autohint=true";
+static char *font = "CaskaydiaCove Nerd Font Mono:style=SemiLight:pixelsize=16:antialias=true:autohint=true";
 // static char *font = "CaskaydiaCove Nerd Font Mono:style=Light:pixelsize=20:antialias=true:autohint=true";
 // static char *font = "CaskaydiaCove Nerd Font Mono:style=ExtraLight:pixelsize=20:antialias=true:autohint=true";
 
@@ -124,7 +124,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.86;
+float alpha = 0.9;
 
 // seabird  st1
 static const char *colorname[] = {
@@ -257,7 +257,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },     /*alt+shift+c复制*/
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },     /*alt+shift+v粘贴*/
 	{ Mod1Mask,             XK_c,           clipcopy,       {.i =  0} },     /* alt + c复制*/
-	{ Mod1Mask,             XK_p,           clippaste,      {.i =  0} },     /* alt + v粘贴*/
+	{ Mod1Mask,             XK_v,           clippaste,      {.i =  0} },     /* alt + v粘贴*/
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
