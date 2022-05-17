@@ -249,11 +249,11 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
     { TERMMOD,              XK_Prior,       zoom,           {.f = +1} },  /*alt+shift+pageup增大字体*/
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ ControlMask,          XK_equal,       zoom,           {.f = +1} },  /*alt+ =增大字体*/
-	{ ControlMask,          XK_minus,       zoom,           {.f = -1} },
-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
-	{ ControlMask,          XK_Home,        zoomreset,      {.f =  0} },  //
+	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },  /*alt+shift+pagedown增大字体*/
+	{ ControlMask,          XK_equal,       zoom,           {.f = +1} },  /*alt+= 增大字体*/
+	{ ControlMask,          XK_minus,       zoom,           {.f = -1} },  /*alt+- 增大字体*/
+	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },  /*alt+shift+Home 默认字体*/
+	{ ControlMask,          XK_Home,        zoomreset,      {.f =  0} },  //Control+home 默认字体
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },     /*alt+shift+c复制*/
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },     /*alt+shift+v粘贴*/
 	{ Mod1Mask,             XK_c,           clipcopy,       {.i =  0} },     /* alt + c复制*/
