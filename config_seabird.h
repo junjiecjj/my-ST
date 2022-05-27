@@ -239,6 +239,7 @@ static char *copyurlcmd[] = { "/bin/bash", "-c",
     "externalpipe", NULL };
 static char *copyoutput[] = { "/bin/bash", "-c", "st-copyout", "externalpipe", NULL };
 
+
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ Mod1Mask,             XK_l,           externalpipe,   {.v = openurlcmd } },/* alt+l打开url*/
@@ -250,9 +251,9 @@ static Shortcut shortcuts[] = {
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
     { TERMMOD,              XK_Prior,       zoom,           {.f = +1} },  /*alt+shift+pageup增大字体*/
 	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },  /*alt+shift+pagedown增大字体*/
+	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },  /*alt+shift+Home 默认字体*/
 	{ ControlMask,          XK_equal,       zoom,           {.f = +1} },  /*alt+= 增大字体*/
 	{ ControlMask,          XK_minus,       zoom,           {.f = -1} },  /*alt+- 增大字体*/
-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },  /*alt+shift+Home 默认字体*/
 	{ ControlMask,          XK_Home,        zoomreset,      {.f =  0} },  //Control+home 默认字体
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },     /*alt+shift+c复制*/
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },     /*alt+shift+v粘贴*/
@@ -263,7 +264,12 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = 20} },  /*shift+pageup上翻20行*/
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = 20} },
+	{ Mod1Mask,             XK_k,           kscrollup,      {.i = 25} },  /*shift+k上翻20行*/
+	{ Mod1Mask,             XK_j,           kscrolldown,    {.i = 25} },
+	{ Mod1Mask,             XK_u,           kscrollup,      {.i = 30} },  /*shift+u上翻20行*/
+	{ Mod1Mask,             XK_d,           kscrolldown,    {.i = 30} },
 };
+
 
 /*
  * Special keys (change & recompile st.info accordingly)

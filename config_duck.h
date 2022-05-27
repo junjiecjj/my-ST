@@ -300,6 +300,10 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = 20} },  /*shift+pageup上翻20行*/
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = 20} },
+	{ Mod1Mask,             XK_k,           kscrollup,      {.i = 25} },  /*shift+k上翻20行*/
+	{ Mod1Mask,             XK_j,           kscrolldown,    {.i = 25} },
+	{ Mod1Mask,             XK_u,           kscrollup,      {.i = 30} },  /*shift+u上翻20行*/
+	{ Mod1Mask,             XK_d,           kscrolldown,    {.i = 30} },
 };
 
 /*
