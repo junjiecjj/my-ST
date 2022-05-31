@@ -124,44 +124,79 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.9;
+float alpha = 0.8;
 
 // seabird  st1
-static const char *colorname[] = {
-	// 8 normal colors
-    [0] = "#0b141a",
-	[1] = "#ff4053",
-	[2] = "#11ab00",
-	[3] = "#bf8c00",
-	[4] = "#0099ff",
-	[5] = "#9854ff",
-	[6] = "#00a5ab",
-	[7] = "#ffffff",
+/* static const char *colorname[] = { */
+/* 	// 8 normal colors */
+/*     [0] = "#0b141a", */
+/* 	[1] = "#ff4053", */
+/* 	[2] = "#11ab00", */
+/* 	[3] = "#bf8c00", */
+/* 	[4] = "#0099ff", */
+/* 	[5] = "#9854ff", */
+/* 	[6] = "#00a5ab", */
+/* 	[7] = "#ffffff", */
 
-    // 8 bright colors
-    [8] = "#0b141a",
-	[9] = "#ff4053",
-	[10] = "#11ab00",
-	[11] = "#bf8c00",
-	[12] = "#0099ff",
-	[13] = "#9854ff",
-	[14] = "#00a5ab",
-	[15] = "#ffffff",
+/*     // 8 bright colors */
+/*     [8] = "#0b141a", */
+/* 	[9] = "#ff4053", */
+/* 	[10] = "#11ab00", */
+/* 	[11] = "#bf8c00", */
+/* 	[12] = "#0099ff", */
+/* 	[13] = "#9854ff", */
+/* 	[14] = "#00a5ab", */
+/* 	[15] = "#ffffff", */
 
-    /* special colors */
-	[256] = "#CDC5BF", /* 258 -> bg */
-	[257] = "#61707a", /* 259 -> fg */
-};
+/*     /1* special colors *1/ */
+/* 	[256] = "#CDC5BF", /1* 258 -> bg *1/ */
+/* 	[257] = "#61707a", /1* 259 -> fg *1/ */
+/* }; */
 
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor
  */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 257;
+/* unsigned int defaultfg = 257; */
+/* unsigned int defaultbg = 256; */
+/* static unsigned int defaultcs = 257; */
+/* static unsigned int defaultrcs = 257; */
+
+
+/* Terminal colors (16 first used in escape sequence) */
+static const char *colorname[] = {
+	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	"#cc241d",
+	"#98971a",
+	"#d79921",
+	"#458588",
+	"#b16286",
+	"#689d6a",
+	"#a89984",
+	"#928374",
+	"#fb4934",
+	"#b8bb26",
+	"#fabd2f",
+	"#83a598",
+	"#d3869b",
+	"#8ec07c",
+	"#ebdbb2",
+	[255] = 0,
+	/* more colors can be added after 255 to use with DefaultXX */
+	"#add8e6", /* 256 -> cursor */
+	"#555555", /* 257 -> rev cursor*/
+	"#282828", /* 258 -> bg */
+	"#ebdbb2", /* 259 -> fg */
+};
+
+
+
+unsigned int defaultfg = 259;
+unsigned int defaultbg = 258;
+unsigned int defaultcs = 256;
+unsigned int defaultrcs = 257;
+/* unsigned int background = 258; */
 
 
 /*
@@ -239,7 +274,6 @@ static char *copyurlcmd[] = { "/bin/bash", "-c",
     "externalpipe", NULL };
 static char *copyoutput[] = { "/bin/bash", "-c", "st-copyout", "externalpipe", NULL };
 
-
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ Mod1Mask,             XK_l,           externalpipe,   {.v = openurlcmd } },/* alt+l打开url*/
@@ -264,12 +298,11 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = 20} },  /*shift+pageup上翻20行*/
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = 20} },
-	{ Mod1Mask,             XK_k,           kscrollup,      {.i = 25} },  /*shift+k上翻20行*/
+	{ Mod1Mask,             XK_k,           kscrollup,      {.i = 25} },  /* Alt+k上翻20行*/
 	{ Mod1Mask,             XK_j,           kscrolldown,    {.i = 25} },
-	{ Mod1Mask,             XK_u,           kscrollup,      {.i = 30} },  /*shift+u上翻20行*/
+	{ Mod1Mask,             XK_u,           kscrollup,      {.i = 30} },  /* Alt+u上翻20行*/
 	{ Mod1Mask,             XK_d,           kscrolldown,    {.i = 30} },
 };
-
 
 /*
  * Special keys (change & recompile st.info accordingly)
